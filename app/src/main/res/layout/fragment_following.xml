@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".ui.FollowingFragment">
+
+    <TextView
+            android:id="@+id/text_information"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""/>
+
+    <ProgressBar android:layout_width="match_parent" android:layout_height="wrap_content"
+                 android:id="@+id/progress_bar"
+                 android:layout_marginTop="40dp"
+    />
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_user_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+    />
+</FrameLayout>
