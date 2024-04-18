@@ -4,7 +4,6 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.recyclerview.widget.RecyclerView
 import com.example.submitiondicoding2.data.response.PersonUser
 import com.example.submitiondicoding2.data.response.ResponseUser
 import com.example.submitiondicoding2.data.retrofit.ApiConfig

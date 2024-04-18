@@ -10,7 +10,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.submitiondicoding2.R
 import com.example.submitiondicoding2.data.response.GetFollowItem
 import com.example.submitiondicoding2.data.retrofit.ApiConfig
 import com.example.submitiondicoding2.databinding.FragmentFollowersBinding
