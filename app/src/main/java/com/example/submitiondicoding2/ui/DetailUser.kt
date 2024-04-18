@@ -32,8 +32,8 @@ class DetailUser : AppCompatActivity() {
 
         @StringRes
         private val TAB_TITLES = intArrayOf(
-            R.string.follower_text,
-            R.string.following_text
+            R.string.following_text,
+            R.string.follower_text
         )
     }
 

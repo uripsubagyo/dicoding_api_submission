@@ -3,7 +3,7 @@
     <string name="searchbar_hint">Masukkan kata</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="follower_text">Followers</string>
-    <string name="following_text">Followers</string>
+    <string name="following_text">Following</string>
     <string name="not_load">Data Not Load</string>
     <string name="avatar">avatar user</string>
     <string name="username">username</string>
