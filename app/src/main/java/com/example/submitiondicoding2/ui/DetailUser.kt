@@ -1,11 +1,15 @@
 package com.example.submitiondicoding2.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.annotation.StringRes
+import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.constraintlayout.widget.ConstraintSet
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
@@ -19,6 +23,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+
 
 class DetailUser : AppCompatActivity() {
 
@@ -56,20 +61,39 @@ class DetailUser : AppCompatActivity() {
         callDetailUser(intent.getStringExtra(USERNAME).toString())
 
         detailData.observe(this, Observer { detailUser ->
+            val progresBar: ProgressBar = findViewById(R.id.load)
+            progresBar.visibility = View.GONE
+
             val textUserName : TextView  = findViewById(R.id.username)
             textUserName.setText(detailData.value?.login)
+            textUserName.visibility = View.VISIBLE
 
             val textFullName : TextView = findViewById(R.id.full_name)
             textFullName.setText(detailData.value?.name)
+            textFullName.visibility = View.VISIBLE
 
             val avatarView : ImageView = findViewById(R.id.imageView)
+            avatarView.visibility =  View.VISIBLE
             Glide.with(this).load(detailData.value?.avatarUrl).into(avatarView)
 
             val textFollowing : TextView = findViewById(R.id.Following)
             textFollowing.setText("${detailData.value?.following} Following")
+            textFollowing.visibility = View.VISIBLE
 
             val textFollowers : TextView = findViewById(R.id.Followers)
             textFollowers.setText("${detailData.value?.followers} Followers")
+            textFollowers.visibility = View.VISIBLE
+
+
+//            val tabLayout: ConstraintLayout = findViewById(R.id.tabs)
+//
+//            val constraintSet = ConstraintSet()
+//
+//            constraintSet.clone(tabLayout)
+//
+//            constraintSet.connect(R.id.Followers, ConstraintSet.BOTTOM, R.id.Followers, ConstraintSet.BOTTOM,10)
+//
+//            constraintSet.applyTo(tabLayout)
 
         })
 
@@ -100,5 +124,6 @@ class DetailUser : AppCompatActivity() {
             }
         })
     }
+
 
 }

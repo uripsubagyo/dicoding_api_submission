@@ -78,7 +78,7 @@ class FollowingFragment : Fragment() {
 
     private fun resultView(listItems: List<GetFollowItem?>?){
         if(listItems?.count() == 0){
-            binding.textInformation.setText("Tidak memiliki followers")
+            binding.textInformation.setText("Tidak memiliki following")
         } else{
             binding.textInformation.visibility = View.GONE
 

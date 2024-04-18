@@ -88,6 +88,7 @@ class FollowersFragment : Fragment() {
         } else{
             binding.textInformation.visibility = View.GONE
 
+
             val adapter = UserListFollowAdapter()
             adapter.submitList(listItems)
 
